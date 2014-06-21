@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(invF)
         }
-        # recalculates the inverse if it is undefined
+        # recalculates the inverse is undefined
         data <- x$get()
         invF <- solve(data)
         x$setInv(invF)
