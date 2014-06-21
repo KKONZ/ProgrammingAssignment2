@@ -27,15 +27,16 @@ makeCacheMatrix <- function(x = matrix()) {
              )
 }
 
-## this function pulls variables from memory if the the data is cached
+# this function pulls variables from memory if the the data is cached
 
 cacheSolve <- function(x, ...) {
         invF <- x$getInv()
-        ## Checks to see if the matrix has been defined (if it is not a null value)
+        # Checks to see if the matrix has been defined (if it is not a null value)
         if(!is.null(invF)) {
                 message("getting cached data")
                 return(invF)
         }
+        # recalculates the inverse if it is undefined
         data <- x$get()
         invF <- solve(data)
         x$setInv(invF)
