@@ -1,3 +1,5 @@
+# coded written by Karl Konz
+
 makeCacheMatrix <- function(x = matrix()) {
         
         # declare a variable to inverse a matrix
